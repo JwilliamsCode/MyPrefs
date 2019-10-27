@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,38 +12,56 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyPrefs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F7i-OC-Sc3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7i-OC-Sc3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FR7-cI-aXh"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="App Preferences" id="raW-CL-Wjp"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-Bw-kRF">
-                                <rect key="frame" x="134" y="88" width="146" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-Bw-kRF">
+                                <rect key="frame" x="134" y="96" width="146" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="G4m-ds-dpN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Srl-dF-eOf">
-                                <rect key="frame" x="134" y="124" width="146" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Srl-dF-eOf">
+                                <rect key="frame" x="134" y="132" width="146" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="6rh-Tu-OWZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBo-ZA-3kn">
-                                <rect key="frame" x="140" y="166" width="134" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-cg-0Gl">
+                                <rect key="frame" x="134" y="174" width="146" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="vYU-oW-exL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="W3P-gf-C6J"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose Birthdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBo-ZA-3kn">
+                                <rect key="frame" x="134" y="216" width="146" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Uer-gF-eJv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihb-61-Jan">
-                                <rect key="frame" x="0.0" y="195" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihb-61-Jan">
+                                <rect key="frame" x="0.0" y="245" width="414" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="-31545080.244485021">
                                     <!--2000-01-01 21:28:39 +0000-->
                                 </date>
@@ -54,9 +72,8 @@
                                     <!--2020-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz6-Rv-IMH">
-                                <rect key="frame" x="190" y="384" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz6-Rv-IMH">
+                                <rect key="frame" x="190" y="415" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h0L-ES-7Aq"/>
@@ -64,10 +81,33 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="F7i-OC-Sc3" firstAttribute="centerX" secondItem="H6n-Bw-kRF" secondAttribute="centerX" id="50N-43-bTJ"/>
+                            <constraint firstItem="bbl-cg-0Gl" firstAttribute="top" secondItem="Srl-dF-eOf" secondAttribute="bottom" constant="8" id="5Le-Sj-HqI"/>
+                            <constraint firstItem="Xz6-Rv-IMH" firstAttribute="top" secondItem="Ihb-61-Jan" secondAttribute="bottom" constant="26" id="5Y1-H5-2Nc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ihb-61-Jan" secondAttribute="trailing" constant="8" id="7AH-tu-bhR"/>
+                            <constraint firstItem="sBo-ZA-3kn" firstAttribute="centerX" secondItem="Ihb-61-Jan" secondAttribute="centerX" id="8dV-RH-4uz"/>
+                            <constraint firstItem="H6n-Bw-kRF" firstAttribute="trailing" secondItem="Srl-dF-eOf" secondAttribute="trailing" id="AkP-pe-OIK"/>
+                            <constraint firstItem="Srl-dF-eOf" firstAttribute="trailing" secondItem="bbl-cg-0Gl" secondAttribute="trailing" id="Ekl-Jy-qKV"/>
+                            <constraint firstItem="Srl-dF-eOf" firstAttribute="leading" secondItem="bbl-cg-0Gl" secondAttribute="leading" id="Ida-pU-9lr"/>
+                            <constraint firstItem="sBo-ZA-3kn" firstAttribute="top" secondItem="bbl-cg-0Gl" secondAttribute="bottom" constant="16" id="MDO-eH-xqS"/>
+                            <constraint firstItem="H6n-Bw-kRF" firstAttribute="leading" secondItem="Srl-dF-eOf" secondAttribute="leading" id="QqM-oG-K71"/>
+                            <constraint firstItem="sBo-ZA-3kn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="WDa-43-55P"/>
+                            <constraint firstItem="F7i-OC-Sc3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wx7-fe-pgk"/>
+                            <constraint firstItem="bbl-cg-0Gl" firstAttribute="centerX" secondItem="Xz6-Rv-IMH" secondAttribute="centerX" id="YtZ-Sx-gtj"/>
+                            <constraint firstItem="F7i-OC-Sc3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aaG-X1-fuv"/>
+                            <constraint firstItem="Xz6-Rv-IMH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hb3-Ti-Xn3"/>
+                            <constraint firstItem="Ihb-61-Jan" firstAttribute="top" secondItem="sBo-ZA-3kn" secondAttribute="bottom" constant="8" id="jOL-C5-TFB"/>
+                            <constraint firstItem="Srl-dF-eOf" firstAttribute="top" secondItem="H6n-Bw-kRF" secondAttribute="bottom" constant="2" id="jnB-sW-pFs"/>
+                            <constraint firstItem="H6n-Bw-kRF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="r9T-TZ-4AJ"/>
+                            <constraint firstItem="F7i-OC-Sc3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sSS-Vz-tVN"/>
+                            <constraint firstItem="H6n-Bw-kRF" firstAttribute="top" secondItem="F7i-OC-Sc3" secondAttribute="bottom" id="uOP-VD-ScY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="datepicker" destination="Ihb-61-Jan" id="jXp-ZD-yRB"/>
+                        <outlet property="txtAddress" destination="bbl-cg-0Gl" id="XkH-fc-jhP"/>
                         <outlet property="txtEmail" destination="Srl-dF-eOf" id="1O7-be-tCb"/>
                         <outlet property="txtFullName" destination="H6n-Bw-kRF" id="HFD-j7-jNy"/>
                     </connections>

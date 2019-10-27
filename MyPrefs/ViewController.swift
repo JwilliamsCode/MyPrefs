@@ -3,6 +3,7 @@
 //  MyPrefs
 //
 //  Created by Charles Konkol on 10/21/19.
+//  Modified by Justin WIlliams on 10/27/19
 //  Copyright © 2019 Charles Konkol. All rights reserved.
 //
 
@@ -16,10 +17,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var datepicker: UIDatePicker!
     
+    @IBOutlet weak var txtAddress: UITextField!
+    
     @IBAction func btnSave(_ sender: Any) {
         let defaults: UserDefaults = UserDefaults.standard
             defaults.set(self.txtFullName.text, forKey: "fullname")
             defaults.set(self.txtEmail.text, forKey: "email")
+            defaults.set(self.txtAddress.text, forKey: "address")
               let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMM d, yyyy" //Your New Date format as per requirement change it own
             let newDate = dateFormatter.string(from:datepicker.date) //pass Date here
@@ -39,6 +43,9 @@ class ViewController: UIViewController {
               if defaults.string(forKey: "email") != nil{
                   txtEmail.text = defaults.string(forKey: "email")
               }
+            if defaults.string(forKey: "address") != nil{
+                txtAddress.text = defaults.string(forKey: "address")
+            }
               if defaults.string(forKey: "bdate") != nil{
                   let bdate  = defaults.string(forKey: "bdate")
                   let dateFormatter = DateFormatter()
